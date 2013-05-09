@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ztest"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Light" >
+        <!-- android:theme="@style/AppTheme" -->
+        <activity
+            android:name="com.example.ztest.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.ztest.ListenerLogin"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.ztest.ListenerRegister"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.ztest.ListenerHomeOwner"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.ztest.ListenerProfileOwner"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.ztest.ListenerHome"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.ztest.ListenerProfile"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.ztest.ListenerProfileFavouriteRestaurants"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.ztest.ListenerProfileFavouriteTypeRestaurants"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.ztest.ListenerOwnerRestaurant"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.ztest.ListenerOwnerRestaurantMeals"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.ztest.ListenerOwnerRestaurantMenus"
+            android:label="@string/app_name" >
+        </activity>
+		<activity
+            android:name="com.example.ztest.ListenerMealAdd"
+            android:label="@string/app_name" >
+        </activity> 
+        <activity
+            android:name="com.example.ztest.ListenerMenuAdd"
+            android:label="@string/app_name" >
+        </activity> 
+        <activity
+            android:name="com.example.ztest.ListenerFindRestaurant"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.ztest.ListenerRestaurant"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.ztest.ListenerRestaurantMeals"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.ztest.ListenerRestaurantMenus"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.ztest.ListenerRestaurantPictures"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.ztest.ListenerMenu"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.ztest.ListenerMeal"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.ztest.ListenerReservation"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.ztest.ListenerReservationMealList"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.ztest.ListenerReservationMenuList"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.ztest.ListenerMenuRemove"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.ztest.ListenerMealRemove"
+            android:label="@string/app_name" >
+        </activity>
+    </application>
+
+</manifest>
