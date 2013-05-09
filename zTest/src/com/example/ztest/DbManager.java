@@ -78,6 +78,7 @@ public class DbManager{
 				db.execSQL("DROP TABLE IF EXISTS \"FavouriteResto\";");
 				db.execSQL("CREATE TABLE \"FavouriteResto\" (\"numUser\" TEXT NOT NULL  REFERENCES USER (\"num\"), \"numResto\" TEXT NOT NULL REFERENCES RESTAURANT (\"num\") , PRIMARY KEY (\"numUser\", \"numResto\"));");
 				db.execSQL("INSERT INTO \"FavouriteResto\" VALUES('0496660666','010451585');");
+				db.execSQL("INSERT INTO \"FavouriteResto\" VALUES('11','010451585');");
 
 				//FavouriteTypeResto
 				db.execSQL("DROP TABLE IF EXISTS \"FavouriteTypeResto\";");
@@ -512,7 +513,7 @@ public class DbManager{
 				update(m.getMeals()[i]);
 			}*/
 		}
-		//------------------------------RESEREVATIONS-----------------------
+		//------------------------------RESERVATIONS-----------------------
 		else if(o instanceof Reservation){
 			Reservation r =(Reservation) o;
 			ContentValues values=new ContentValues();
@@ -531,12 +532,12 @@ public class DbManager{
 				values.put("nbMeal", r.getNumerOf(r.getMeals()[i]));
 				if(db.insertWithOnConflict("MealReservation", null, values, SQLiteDatabase.CONFLICT_REPLACE)<0) return false;
 			}
-			for(int i=0;i<r.getMeals().length;i++){
+			for(int i=0;i<r.getMenus().length;i++){
 				values.clear();
 				values.put("idRes", r.getId());
-				values.put("nameMenu", r.getMeals()[i].getName());
+				values.put("nameMenu", r.getMenus()[i].getName());
 				values.put("numResto", r.getRestaurant().getNumber());
-				values.put("nbMenu", r.getNumerOf(r.getMeals()[i]));
+				values.put("nbMenu", r.getNumerOf(r.getMenus()[i]));
 				if(db.insertWithOnConflict("MenuReservation", null, values, SQLiteDatabase.CONFLICT_REPLACE)<0) return false;
 			}
 		}
